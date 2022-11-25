@@ -1,0 +1,129 @@
+{
+	"common": {
+		"name": "tasmoupdate",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"zh-cn": "首次出版"
+			}
+		},
+		"title": "TasmoUpdate",
+		"titleLang": {
+			"en": "TasmoUpdate",
+			"de": "TasmoUpdate",
+			"ru": "TasmoUpdate",
+			"pt": "TasmoUpdate",
+			"nl": "TasmoUpdate",
+			"fr": "TasmoUpdate",
+			"it": "TasmoUpdate",
+			"es": "TasmoUpdate",
+			"pl": "TasmoUpdate",
+			"zh-cn": "TasmoUpdate"
+		},
+		"desc": {
+			"en": "Automatic Tasmota Update",
+			"de": "Automatic Tasmota Update",
+			"ru": "Automatic Tasmota Update",
+			"pt": "Automatic Tasmota Update",
+			"nl": "Automatic Tasmota Update",
+			"fr": "Automatic Tasmota Update",
+			"it": "Automatic Tasmota Update",
+			"es": "Automatic Tasmota Update",
+			"pl": "Automatic Tasmota Update",
+			"zh-cn": "Automatic Tasmota Update"
+		},
+		"authors": [
+			"Failsystem <steve.pottel@outlook.de>"
+		],
+		"keywords": [
+			"Tasmota",
+			"Update",
+			"AutoUpdate"
+		],
+		"license": "MIT",
+		"platform": "Javascript/Node.js",
+		"main": "main.js",
+		"icon": "tasmoupdate.jpg",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/psydie/ioBroker.tasmoupdate/main/admin/tasmoupdate.jpg",
+		"readme": "https://github.com/psydie/ioBroker.tasmoupdate/blob/main/README.md",
+		"loglevel": "info",
+		"mode": "schedule",
+		"allowInit": true,
+		"type": "iot-systems",
+		"compact": true,
+		"connectionType": "local",
+		"dataSource": "poll",
+		"adminUI": {
+			"config": "none"
+		},
+		"dependencies": [
+			{
+				"js-controller": ">=3.3.22"
+			}
+		],
+		"globalDependencies": [
+			{
+				"admin": ">=5.0.0"
+			}
+		]
+	},
+	"native": {
+		"ota_de": "http://ota.tasmota.com/tasmota/release/tasmota-DE.bin.gz",
+		"ota_ir": "http://ota.tasmota.com/tasmota/tasmota-ircustom.bin.gz",
+		"ota_minimal": "http://ota.tasmota.com/tasmota/release/tasmota-minimal.bin.gz",
+		"ota_sensor": "http://ota.tasmota.com/tasmota/tasmota-sensors.bin.gz",
+		"latitude": "",
+		"longitude": "",
+		"globalupdate": false,
+		"ini_settings": false,
+		"restart": false,
+		"setoption0": true,
+		"setoption1": false,
+		"setoption2": false,
+		"setoption3": true,
+		"setoption4": false,
+		"setoption8": false,
+		"setoption10": false,
+		"setoption11": false,
+		"setoption12": false,
+		"setoption13": false,
+		"setoption15": true,
+		"setoption16": false,
+		"setoption17": false,
+		"setoption18": false
+	},
+	"objects": [],
+	"instanceObjects": [
+		{
+			"_id": "info",
+			"type": "channel",
+			"common": {
+				"name": "Information"
+			},
+			"native": {}
+		},
+		{
+			"_id": "info.connection",
+			"type": "state",
+			"common": {
+				"role": "indicator.connected",
+				"name": "Device or service connected",
+				"type": "boolean",
+				"read": true,
+				"write": false,
+				"def": false
+			},
+			"native": {}
+		}
+	]
+}
