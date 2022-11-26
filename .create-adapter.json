@@ -165,7 +165,7 @@
 		}
 	],
 	"language": "JavaScript",
-	"adminUi": "none",
+	"adminUi": "html",
 	"releaseScript": "yes",
 	"indentation": "Tab",
 	"quotes": "double",
